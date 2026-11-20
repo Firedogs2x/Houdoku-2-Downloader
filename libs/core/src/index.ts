@@ -55,7 +55,7 @@ export class TiyoClient extends TiyoClientAbstract {
 
   _webviewFn: WebviewFunc = (url, options) => loadInWebView(this.spoofWindow, url, options);
 
-  // @ts-expect-error version is added to packageJson after build
+  // version is set in package.json at build time
   override getVersion = () => packageJson.version || '0.0.0';
 
   // prettier-ignore
