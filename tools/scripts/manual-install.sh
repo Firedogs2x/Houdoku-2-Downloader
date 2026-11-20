@@ -11,9 +11,9 @@ cd "$(dirname "$0")"
 if [ ! -d "$1/plugins" ]; then
   mkdir "$1/plugins"
 fi
-if [ ! -d "$1/plugins/@tiyo" ]; then
-  mkdir "$1/plugins/@tiyo"
+if [ ! -d "$1/plugins/@houdoku" ]; then
+  mkdir "$1/plugins/@houdoku"
 fi
 
-cp -r ../../dist/libs/core $1/plugins/@tiyo
-rsync -r ../../node_modules $1/plugins/@tiyo/core --exclude 'typescript' --exclude 'electron' --exclude '.bin'
+cp -r ../../dist/libs/core $1/plugins/@houdoku/downloader-core
+rsync -r ../../node_modules $1/plugins/@houdoku/downloader-core --exclude 'typescript' --exclude 'electron' --exclude '.bin'
